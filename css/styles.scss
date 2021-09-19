@@ -1,0 +1,126 @@
+$background: rgb(255,255,255);
+$background-text: black;
+$column-background: rgb(245,245,245);
+
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 18px;
+    background: $background;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: $background-text;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 48px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 0 repeat(9, minmax(0, 1fr)) 0;
+    grid-auto-flow: column;
+    grid-gap: 2.8vw;
+
+    .column {
+        background: $column-background;
+        text-align: center;
+    }
+
+    .title {
+        text-align: left;
+        a {
+            margin-left: 1vw;
+        }
+    }
+
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0 repeat(9, minmax(0, 1fr)) 0;
+    grid-auto-flow: column;
+    grid-gap: 2.8vw;
+
+    // GRID-TEMPLATE-ROWS: REPEAT(1, MINMAX(0, 1fr));
+
+
+    .column {
+        background: $column-background;
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+
+        .spacer-s {height: 5vh;}
+        .spacer-m {height: 8vh;}
+        .spacer-l {height: 12vh;}
+        .spacer-x {height: 15vh;}
+        .ender {height: 3vh;}
+        .filler {flex: auto;}
+
+
+        .col-img img {
+            transition: filter 0.75s;
+        }
+        .col-img img:hover {
+            filter: invert(1) saturate(0.5);
+            cursor: pointer;
+
+            // [ [ <url> [ <x> <y> ]? , ]* [ auto | default | none | context-menu | help | pointer | progress | wait | cell | crosshair | text | vertical-text | alias | copy | move | no-drop | not-allowed | e-resize | n-resize | ne-resize | nw-resize | s-resize | se-resize | sw-resize | w-resize | ew-resize | ns-resize | nesw-resize | nwse-resize | col-resize | row-resize | all-scroll | zoom-in | zoom-out | grab | grabbing ] ]
+        }
+    }
+}
+
+
+.heading {
+    mask-position: right;
+    font-size: 2.65rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    // overflow: hidden;
+    // height: 80px;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-family: 'Bigilla';
+        font-weight: normal;
+        user-select: none; /* Standard */
+    }
+
+    .right {
+        transform: rotate(0deg) translateY(17px);
+    }
+    .left {
+        transform: rotate(180deg) translateY(17px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
