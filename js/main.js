@@ -3,38 +3,38 @@ let tl = gsap.timeline()
 const main = document.querySelector('main');
 const nav = document.querySelector('nav');
 
-// detect when all thumbnails have been loaded
-let thumbnails = document.querySelectorAll('main img'), loader = document.querySelector('#loader');
-// let thumbnailCount = thumbnails.length, loadedCounter = 0;
-// let percentageIncrease = (100 / thumbnailCount);
-// let percentage = 0;
+// // detect when all thumbnails have been loaded
+// let thumbnails = document.querySelectorAll('main img'), loader = document.querySelector('#loader');
+// // let thumbnailCount = thumbnails.length, loadedCounter = 0;
+// // let percentageIncrease = (100 / thumbnailCount);
+// // let percentage = 0;
 
-// thumbnails.forEach(function(thumbnail, index){
-//     if (thumbnail.complete) {
-//         incrementCounter()
-//     } else {
-//         thumbnail.addEventListener( 'load', incrementCounter, false );
-//     }
-// })
+// // thumbnails.forEach(function(thumbnail, index){
+// //     if (thumbnail.complete) {
+// //         incrementCounter()
+// //     } else {
+// //         thumbnail.addEventListener( 'load', incrementCounter, false );
+// //     }
+// // })
 
-// function incrementCounter() {
-//     loadedCounter++
+// // function incrementCounter() {
+// //     loadedCounter++
         
-//     percentage += percentageIncrease;
-//     document.querySelector('#percentage').innerHTML = `${Math.floor(percentage) + 1}%`;
+// //     percentage += percentageIncrease;
+// //     document.querySelector('#percentage').innerHTML = `${Math.floor(percentage) + 1}%`;
 
-//     if (loadedCounter >= thumbnailCount) {
-//         // remove loader
-//         console.log(`${loadedCounter} out of ${thumbnailCount} images loaded`)
+// //     if (loadedCounter >= thumbnailCount) {
+// //         // remove loader
+// //         console.log(`${loadedCounter} out of ${thumbnailCount} images loaded`)
 
-//         tl.to(loader, {
-//             duration: 0.3,
-//             delay: 1,
-//             opacity: 0,
-//             display: 'none'
-//         }, "loaderHide")
-//     }
-// }
+// //         tl.to(loader, {
+// //             duration: 0.3,
+// //             delay: 1,
+// //             opacity: 0,
+// //             display: 'none'
+// //         }, "loaderHide")
+// //     }
+// // }
 
 let percentage = {percentage: 0}
 tl.to(percentage, {
