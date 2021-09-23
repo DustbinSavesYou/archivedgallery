@@ -8,145 +8,219 @@
         <link href="//db.onlinewebfonts.com/c/f7bc9f3a43d932504a1acd84c3452ff8?family=Bigilla" rel="stylesheet" type="text/css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500&display=swap" rel="stylesheet">
         <link href="./css/styles.css" rel="stylesheet">
         <link rel="icon" href="./images/favicon.png" type="image/png">
     </head>
     <body>
         <nav class="nav">
             <div class="edge-margin"></div>
-            <div class="column title"><a href="#">Archive&nbsp;27/09/2021</a></div>
+            <div class="column title"><a href="#">Archive&nbsp;@2021</a></div>
             <div class="column"></div>
-            <div class="column"><a href="#">01</a></div>
+            <div class="column"><a class="main-link" id="link01" href="#">01</a></div>
             <div class="column"></div>
-            <div class="column"><a href="#">02</a></div>
+            <div class="column"><a class="main-link" href="#">02</a></div>
             <div class="column"></div>
-            <div class="column"><a href="#">About</a></div>
+            <div class="column"><a href="#" id="about-link">About</a></div>
             <div class="column"></div>
-            <div class="column"><a href="#">||||</a></div>
+            <div class="column"><a href="#" id="col-icon">||||</a></div>
             <div class="edge-margin"></div>
         </nav>
 
-        <div class="heading">
-            <h1 class="right">FRAGRANCE</h1>
-            <h1 class="left">FRAGRANCE</h1>
+        <div class="loader" id="loader">
+            <div class="percentage" id="percentage"></div>
         </div>
 
-        <main>
+        <div class="heading">
+            <div class="text-container">
+                <h1 class="right">Archive @2021</h1>
+            </div>
+            <div class="text-container">
+                <h1 class="left">Archive @2021</h1>
+            </div>
+        </div>
+
+        <main class="single-cl1">
             <div class="edge-margin"></div>
 
-            <div class="column">
+            <div class="column unselected">
                 <div class="col-img">
-                    <img src="./smallimages/9.jpg">
+                    <img src="./smallimages/9.jpg" data-text="Perspective">
                 </div>
                 <div class="spacer-l"></div>
                 <div class="spacer-s"></div>
                 <div class="col-img">
-                    <img src="./smallimages/32.jpg">
+                    <img src="./smallimages/32.jpg" data-text="Perspective">
                 </div>
                 <div class="filler"></div>
             </div>
 
-            <div class="column">
+            <div class="column unselected">
                 <div class="spacer-x"></div>
                 <div class="spacer-m"></div>
                 <div class="col-img">
-                    <img src="./smallimages/19.jpg">
+                    <img src="./smallimages/19.jpg" data-text="Fragrance">
                 </div>
                 <div class="filler"></div>
                 <div class="col-img">
-                    <img src="./smallimages/22.jpg">
+                    <img src="./smallimages/22.jpg" data-text="Fragrance">
                 </div>
                 <div class="ender"></div>
             </div>
 
-            <div class="column">
+            <div class="column unselected">
                 <div class="spacer-l"></div>
                 <!-- <div class="spacer-m"></div> -->
                 <div class="col-img">
-                    <img src="./smallimages/37.jpg">
+                    <img src="./smallimages/37.jpg" data-text="Flowers">
                 </div>
                 <div class="spacer-x"></div>
                 <!-- <div class="spacer-s"></div> -->
                 <div class="col-img">
-                    <img src="./smallimages/36.jpg">
+                    <img src="./smallimages/36.jpg" data-text="Flowers">
                 </div>
                 <div class="filler"></div>
             </div>
 
-            <div class="column">
+            <div class="column unselected">
                 <div class="col-img">
-                    <img src="./smallimages/40.jpg">
+                    <img src="./smallimages/40.jpg" data-text="Stuart Little">
                 </div>
                 <div class="filler"></div>
                 <div class="col-img">
-                    <img src="./smallimages/38.jpg">
+                    <img src="./smallimages/38.jpg" data-text="Stuart Little">
                 </div>
                 <div class="filler"></div>
                 <div class="col-img">
-                    <img src="./smallimages/10.jpg">
+                    <img src="./smallimages/10.jpg" data-text="Stuart Little">
                 </div>
                 <div class="ender"></div>
             </div>
 
-            <div class="column">
+            <div class="column unselected">
                 <div class="col-img"></div> <!-- For GSAP stagger -->
                 <div class="col-img"></div> <!-- For GSAP stagger -->
             </div>
             
-            <div class="column">
+            <div class="column selected">
                 <div class="spacer-x"></div>
                 <div class="spacer-s"></div>
                 <div class="col-img">
-                    <img src="./smallimages/13.jpg">
+                    <img src="./smallimages/13.jpg" data-text="Insectified">
                 </div>
                 <div class="spacer-x"></div>
                 <!-- <div class="spacer-s"></div> -->
                 <div class="col-img">
-                    <img src="./smallimages/12.jpg">
+                    <img src="./smallimages/12.jpg" data-text="Insectified">
                 </div>
                 <div class="filler"></div>
             </div>
 
-            <div class="column">
+            <div class="column unselected">
                 <div class="spacer-m"></div>
                 <div class="col-img">
-                    <img src="./smallimages/7.jpg">
+                    <img src="./smallimages/7.jpg" data-text="Horizon">
                 </div>
                 <div class="spacer-x"></div>
                 <!-- <div class="spacer-s"></div> -->
                 <div class="col-img">
-                    <img src="./smallimages/27.jpg">
+                    <img src="./smallimages/27.jpg" data-text="Horizon">
                 </div>
                 <div class="filler"></div>
                 <div class="ender"></div>
             </div>
 
-            <div class="column">
+            <div class="column unselected">
                 <div class="col-img">
-                    <img src="./smallimages/28.jpg">
+                    <img src="./smallimages/28.jpg" data-text="Architecture">
                 </div>
                 <div class="filler"></div>
                 <!-- <div class="spacer-s"></div> -->
                 <div class="col-img">
-                    <img src="./smallimages/29.jpg">
+                    <img src="./smallimages/29.jpg" data-text="Architecture">
                 </div>
                 <div class="filler"></div>
                 <div class="col-img">
-                    <img src="./smallimages/41.jpg">
+                    <img src="./smallimages/41.jpg" data-text="Architecture">
                 </div>
                 <div class="ender"></div>
             </div>
 
-            <div class="column">
+            <div class="column unselected">
                 <div class="spacer-l"></div>
                 <div class="spacer-s"></div>
                 <div class="col-img">
-                    <img src="./smallimages/24.jpg">
+                    <img src="./smallimages/24.jpg" data-text="Furniture">
                 </div>
                 <div class="filler"></div>
             </div>
             <div class="edge-margin"></div>
         </main>
+
+        <section class="about" id="about">
+            <div class="edge-margin"></div>
+            <div class="column">
+                <div class="about-heading column-text-outer">
+                    <div class="column-text-inner">
+                        <h1>Archive @2021 <span>by Rayyan Tariq</span></h1>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="column"></div> -->
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+                <div class="column-text-outer">
+                    <p class="column-text-inner"><span class="subheading">Purpose:</span>
+                        A gallery of some of my best images taken over the past two years.
+                        I created this Archive as a project to learn GSAP.</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-text-outer">
+                    <ul class="column-text-inner">
+                        <li class="subheading">Collections:</li>
+                        <li>Perspective</li>
+                        <li>Fragrance</li>
+                        <li>Flowers</li>
+                        <li>Stuart Little</li>
+                        <li>Insectified</li>
+                        <li>Horizon</li>
+                        <li>Architecture</li>
+                        <li>Furniture</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-text-outer">
+                    <ul class="column-text-inner">
+                        <li class="subheading">Technologies: </li>
+                        <li>GS Animation Platform</li>
+                        <li>HTML, CSS & JS</li>
+                        <br>
+                        <li class="subheading">Design: </li>
+                        <li>Gravit Designer</li>
+                        <li>Figma</li>
+                        <br>
+                        <li class="subheading">Fonts: </li>
+                        <li>Bigilla <span style="font-family: 'Bigilla';"> ( Bigilla )</span></li>
+                        <li>Urbanist</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-text-outer">
+                    <ul class="column-text-inner">
+                        <li class="subheading">Contact: </li>
+                        <li><a href="mailto:raytariq93@gmail.com">raytariq93@gmail.com</a></li>
+                        <li><a href="https://www.instagram.com/dustbinsavesyou/" target="_blank">@dustbinsavesyou Instagram</a></li>
+                        <li><a href="https://untitled-rayyan.web.app" target="_blank">untitled-rayyan.web.app</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column"></div>
+            <div class="edge-margin"></div>
+        </section>
+
     </body>
 </html>

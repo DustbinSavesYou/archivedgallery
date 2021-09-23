@@ -1,6 +1,8 @@
-$background: rgb(255,255,255);
+$background: rgb(250,250,250);
 $background-text: black;
-$column-background: rgb(245,245,245);
+$column-background: $background;
+$about-background: black;
+$about-background-text: white;
 
 body {
     height: 100vh;
@@ -8,8 +10,9 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Urbanist', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     background: $background;
+    color: $background-text;
     overflow: hidden;
 }
 
@@ -22,8 +25,12 @@ img {
     max-width: 100%;
 }
 
+::-moz-selection { background: black; color: white; }
+::selection { background: black; color: white; }
+
 nav {
     position: fixed;
+    z-index: 4;
     width: 100vw;
     top: 0;
     left: 0;
@@ -32,17 +39,43 @@ nav {
     display: grid;
     grid-template-columns: 0 repeat(9, minmax(0, 1fr)) 0;
     grid-auto-flow: column;
-    grid-gap: 2.8vw;
+    grid-gap: 3.2vw;
+    animation: fade-in 300ms;
 
     .column {
-        background: $column-background;
+        // background: $column-background;
         text-align: center;
+
+        a {
+            font-weight: 500;
+            font-size: 16px;
+        }
     }
 
     .title {
         text-align: left;
         a {
             margin-left: 1vw;
+        }
+    }
+
+    a {
+        transition: opacity 0.75s color 0.75s;
+        display: block;
+        opacity: 1;
+    }
+
+    &.about-revealed {
+
+        a {
+            color: $about-background-text;
+        }
+        .main-link a {
+            opacity: 0;
+            
+            &:hover {
+                cursor: default;
+            }
         }
     }
 
@@ -54,16 +87,17 @@ main {
     display: grid;
     grid-template-columns: 0 repeat(9, minmax(0, 1fr)) 0;
     grid-auto-flow: column;
-    grid-gap: 2.8vw;
+    grid-gap: 3.2vw;
+    background: $background;
 
     // GRID-TEMPLATE-ROWS: REPEAT(1, MINMAX(0, 1fr));
 
-
     .column {
-        background: $column-background;
+        background-color: $column-background;
         padding-top: 60px;
         display: flex;
         flex-direction: column;
+        transition: background-color 750ms;
 
         .spacer-s {height: 5vh;}
         .spacer-m {height: 8vh;}
@@ -72,15 +106,48 @@ main {
         .ender {height: 3vh;}
         .filler {flex: auto;}
 
-
         .col-img img {
-            transition: filter 0.75s;
+            transition: filter 750ms;
+            width: 100%;
         }
         .col-img img:hover {
-            filter: invert(1) saturate(0.5);
+            filter: invert(1) saturate(0.5) contrast(1.3);
             cursor: pointer;
+        }
+    }
 
-            // [ [ <url> [ <x> <y> ]? , ]* [ auto | default | none | context-menu | help | pointer | progress | wait | cell | crosshair | text | vertical-text | alias | copy | move | no-drop | not-allowed | e-resize | n-resize | ne-resize | nw-resize | s-resize | se-resize | sw-resize | w-resize | ew-resize | ns-resize | nesw-resize | nwse-resize | col-resize | row-resize | all-scroll | zoom-in | zoom-out | grab | grabbing ] ]
+    &.greyscale .column {
+        // background-color: rgb(227,227,227);
+        .col-img img {filter: invert(0) saturate(0) contrast(1);}
+        .col-img img:hover {filter: invert(1) saturate(0) contrast(1.3);}
+    }
+
+    &.col-bg .column {
+        background-color: rgb(235,235,235);
+    }
+
+
+    &.single-cl {
+        .column {
+            width: 0;
+            padding-top: 15%;
+        }
+        .selected {
+            position: absolute;
+            // left: 0;
+            // top: 0;
+            width: 100%;
+            flex-flow: row nowrap;
+            gap: 3.2vw;
+
+            .col-img {
+                display: inline-block;
+                
+                img {
+                    max-height: 500px;
+                    width: auto;
+                }
+            }
         }
     }
 }
@@ -88,20 +155,24 @@ main {
 
 .heading {
     mask-position: right;
-    font-size: 2.65rem;
+    font-size: 2.35rem;
     position: fixed;
+    z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
-    // overflow: hidden;
-    // height: 80px;
+    text-transform: uppercase;
 
+    .text-container {
+        overflow: hidden;
+    }
     h1 {
         margin: 0;
         padding: 0;
         font-family: 'Bigilla';
         font-weight: normal;
         user-select: none; /* Standard */
+        overflow: hidden;
     }
 
     .right {
@@ -113,13 +184,92 @@ main {
 }
 
 
+.about {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0);
+    color: $about-background-text;
+    opacity: 0;
+
+    display: grid;
+    grid-template-columns: 0 repeat(8, minmax(0, 1fr)) 0;
+    grid-auto-flow: column;
+    grid-gap: 3.2vw;
+
+    .column {
+        // background-color: #0f0f0f;
+        padding-top: 15vh;
+        font-size: 14px;
+
+        .column-text-outer {
+            overflow: hidden;
+        }
+
+        .subheading {
+            display: block;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: $about-background-text;
+        }
+    }
+
+    .about-heading {
+       position: absolute;
+       bottom: 50px;
+       left: 50px;
+       font-family: bigilla;
+       
+       h1 {
+           font-size: 4.3em;
+           margin: 0;
+           padding: 0;
+           font-weight: 400;
+
+           span {
+               font-size: 2.9rem;
+           }
+       }
+    }
+}
+
+.loader {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 5;
+    background: $background;
+
+    .percentage {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
 
 
-
-
-
-
-
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 
 
 
