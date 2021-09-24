@@ -38,7 +38,7 @@ let thumbnails = document.querySelectorAll('main img'), loader = document.queryS
 
 let percentage = {percentage: 0}
 tl.to(percentage, {
-    duration: 0.5,
+    duration: 4,
     percentage: 100,
     ease: "steps(100)",
     onUpdate: function(){
@@ -163,15 +163,9 @@ col_icon.addEventListener('click', function() {
         main.classList.add('greyscale');
         main.classList.add('col-bg');
     }
-    if (counter == 3) {
-        main.classList.remove('greyscale');
-        main.classList.add('col-bg');
-    }
-    // if (main.classList.contains('greyscale')) {
-    //     main.classList.remove('greyscale')
-    // } 
-    // else {
-    //     main.classList.add('greyscale')
+    // if (counter == 3) {
+    //     main.classList.remove('greyscale');
+    //     main.classList.add('col-bg');
     // }
 })
 

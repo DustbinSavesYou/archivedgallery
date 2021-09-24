@@ -39,7 +39,7 @@ nav {
     display: grid;
     grid-template-columns: 0 repeat(9, minmax(0, 1fr)) 0;
     grid-auto-flow: column;
-    grid-gap: 3.2vw;
+    grid-gap: 3.3vw;
     animation: fade-in 300ms;
 
     .column {
@@ -87,7 +87,7 @@ main {
     display: grid;
     grid-template-columns: 0 repeat(9, minmax(0, 1fr)) 0;
     grid-auto-flow: column;
-    grid-gap: 3.2vw;
+    grid-gap: 3.3vw;
     background: $background;
 
     // GRID-TEMPLATE-ROWS: REPEAT(1, MINMAX(0, 1fr));
@@ -138,7 +138,7 @@ main {
             // top: 0;
             width: 100%;
             flex-flow: row nowrap;
-            gap: 3.2vw;
+            gap: 3.3vw;
 
             .col-img {
                 display: inline-block;
@@ -197,7 +197,7 @@ main {
     display: grid;
     grid-template-columns: 0 repeat(8, minmax(0, 1fr)) 0;
     grid-auto-flow: column;
-    grid-gap: 3.2vw;
+    grid-gap: 3.3vw;
 
     .column {
         // background-color: #0f0f0f;
