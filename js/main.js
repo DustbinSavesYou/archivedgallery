@@ -35,21 +35,21 @@ const nav = document.querySelector('nav');
 // //         }, "loaderHide")
 // //     }
 // // }
-
-let percentage = {percentage: 0}
-tl.to(percentage, {
-    duration: 0.5,
-    percentage: 100,
-    ease: "steps(100)",
-    onUpdate: function(){
-        document.querySelector('#percentage').innerHTML = `${percentage.percentage}%`;
-    }
-})
-tl.to(loader, {
-    duration: 0.3,
-    opacity: 0,
-    display: 'none'
-}, "loaderHide")
+// 
+// let percentage = {percentage: 0}
+// tl.to(percentage, {
+//     duration: 0.5,
+//     percentage: 100,
+//     ease: "steps(100)",
+//     onUpdate: function(){
+//         document.querySelector('#percentage').innerHTML = `${percentage.percentage}%`;
+//     }
+// })
+// tl.to(loader, {
+//     duration: 0.3,
+//     opacity: 0,
+//     display: 'none'
+// }, "loaderHide")
 
 
 // Images slide in animation
@@ -256,4 +256,11 @@ link01.addEventListener('click', function(){
         duration: 0.3,
         opacity: 1,
     }, "<")
+    let img1 = document.querySelectorAll('main .selected img')[0]
+    let img2 = document.querySelectorAll('main .selected img')[1]
+    cs.to(img1, {
+        y: 30,
+        x: -400,
+        scale: 2
+    })
 })
