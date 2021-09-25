@@ -38,7 +38,7 @@ let thumbnails = document.querySelectorAll('main img'), loader = document.queryS
 
 let percentage = {percentage: 0}
 tl.to(percentage, {
-    duration: 4,
+    duration: 0.5,
     percentage: 100,
     ease: "steps(100)",
     onUpdate: function(){
@@ -232,22 +232,18 @@ aboutLink.addEventListener('click', function() {
 let link01 = document.querySelector('#link01');
 link01.addEventListener('click', function(){
     let cs = gsap.timeline();
-    // cs.set('main .column', {
-    //     width: 0,
-    //     paddingTop: '15%'
-    // })
-    // cs.to('main .selected', {
-    //     position: 'absolute',
-    //     width: '100%',
-    //     flexFlow: 'row nowrap',
-    //     gap: '3.2vw'
-    // })
-    cs.to('main .unselected', {
-        duration: 0.3,
-        opacity: 0
+
+    cs.to('.col-img img', {
+        duration: 2,
+        stagger: {
+            from: 9, //9
+            amount: 0.85
+        }, 
+        delay: 0,
+        ease: "power4.out",
+    
+        y: -windowHeight - 10,
+        opacity: 0,
     })
-    cs.to('main .selected', {
-        duration: 0.3,
-        opacity: 1,
-    }, "<")
+    
 })
