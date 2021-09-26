@@ -8,6 +8,8 @@ body {
   background: #fafafa;
   color: black;
   overflow: hidden;
+  user-select: none;
+  /* Standard */
 }
 
 a {
@@ -17,6 +19,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 ::-moz-selection {
@@ -35,7 +38,7 @@ nav {
   width: 100vw;
   top: 0;
   left: 0;
-  height: 48px;
+  height: 40px;
   align-items: center;
   display: grid;
   grid-template-columns: 0 repeat(9, minmax(0, 1fr)) 0;
@@ -82,7 +85,7 @@ main {
 }
 main .column {
   background-color: #fafafa;
-  padding-top: 60px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   transition: background-color 750ms;
@@ -122,6 +125,9 @@ main.greyscale .column .col-img img:hover {
 main.col-bg .column {
   background-color: #ebebeb;
 }
+main.col-bg-2 .column {
+  background-color: #e1e1e1;
+}
 main.single-cl .column {
   width: 0;
   padding-top: 15%;
@@ -152,6 +158,9 @@ main.single-cl .selected .col-img img {
 }
 .heading .text-container {
   overflow: hidden;
+}
+.heading .span {
+  font-size: 2rem;
 }
 .heading h1 {
   margin: 0;
@@ -245,6 +254,16 @@ main.single-cl .selected .col-img img {
   100% {
     opacity: 1;
   }
+}
+.collection-view {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background: #fafafa;
+  z-index: 3;
+  display: none;
+  opacity: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
