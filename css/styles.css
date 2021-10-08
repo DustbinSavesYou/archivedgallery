@@ -32,45 +32,53 @@ img {
   color: white;
 }
 
-nav {
+.nav-container {
+  overflow: hidden;
   position: fixed;
   z-index: 4;
-  width: 100vw;
-  top: 0;
-  left: 0;
   height: 40px;
+}
+
+.about-nav a {
+  color: black;
+}
+
+.nav, .about-nav {
+  width: 100vw;
+  left: 0;
   align-items: center;
+  height: 40px;
   display: grid;
   grid-template-columns: 0 repeat(9, minmax(0, 1fr)) 0;
   grid-auto-flow: column;
   grid-gap: 3.3vw;
   animation: fade-in 300ms;
 }
-nav .column {
+.nav .column, .about-nav .column {
   text-align: center;
 }
-nav .column a {
+.nav .column a, .about-nav .column a {
   font-weight: 500;
   font-size: 16px;
 }
-nav .title {
+.nav .title, .about-nav .title {
   text-align: left;
 }
-nav .title a {
+.nav .title a, .about-nav .title a {
   margin-left: 1vw;
 }
-nav a {
+.nav a, .about-nav a {
   transition: opacity 0.75s color 0.75s;
   display: block;
   opacity: 1;
 }
-nav.about-revealed a {
-  color: white;
+.nav.about-revealed a, .about-nav.about-revealed a {
+  color: black;
 }
-nav.about-revealed .main-link a {
+.nav.about-revealed .main-link a, .about-nav.about-revealed .main-link a {
   opacity: 0;
 }
-nav.about-revealed .main-link a:hover {
+.nav.about-revealed .main-link a:hover, .about-nav.about-revealed .main-link a:hover {
   cursor: default;
 }
 
@@ -170,6 +178,7 @@ main.single-cl .selected .col-img img {
   user-select: none;
   /* Standard */
   overflow: hidden;
+  white-space: nowrap;
 }
 .heading .right {
   transform: rotate(0deg) translateY(17px);
@@ -178,14 +187,18 @@ main.single-cl .selected .col-img img {
   transform: rotate(180deg) translateY(17px);
 }
 
+img {
+  background-color: white;
+}
+
 .about {
   position: absolute;
   top: 0;
   z-index: -1;
   height: 100%;
   width: 100%;
-  background: black;
-  color: white;
+  background: #fafafa;
+  color: black;
   opacity: 0;
   display: grid;
   grid-template-columns: 0 repeat(8, minmax(0, 1fr)) 0;
@@ -214,7 +227,7 @@ main.single-cl .selected .col-img img {
   padding: 0;
 }
 .about .column a {
-  color: white;
+  color: black;
 }
 .about .about-heading {
   position: absolute;
@@ -264,6 +277,19 @@ main.single-cl .selected .col-img img {
   z-index: 3;
   display: none;
   opacity: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.collection-view .heading-container {
+  overflow: hidden;
+}
+.collection-view h1 {
+  overflow: hidden;
+  font-family: "Bigilla";
+  font-weight: 400;
+  font-size: 6rem;
+  margin: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
