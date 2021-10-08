@@ -1,8 +1,8 @@
 $background: rgb(250,250,250);
 $background-text: black;
 $column-background: $background;
-$about-background: black;
-$about-background-text: white;
+$about-background: $background;
+$about-background-text: $background-text;
 
 body {
     height: 100vh;
@@ -30,14 +30,24 @@ img {
 ::-moz-selection { background: black; color: white; }
 ::selection { background: black; color: white; }
 
-nav {
+
+
+.nav-container {
+    overflow: hidden;
     position: fixed;
     z-index: 4;
-    width: 100vw;
-    top: 0;
-    left: 0;
     height: 40px;
+}
+.about-nav {
+    a {
+        color: $about-background-text;
+    }
+}
+.nav, .about-nav {
+    width: 100vw;
+    left: 0;
     align-items: center;
+    height: 40px;
     display: grid;
     grid-template-columns: 0 repeat(9, minmax(0, 1fr)) 0;
     grid-auto-flow: column;
@@ -181,6 +191,7 @@ main {
         font-weight: normal;
         user-select: none; /* Standard */
         overflow: hidden;
+        white-space: nowrap;
     }
 
     .right {
@@ -191,6 +202,7 @@ main {
     }
 }
 
+img {background-color: white;}
 
 .about {
     position: absolute;
@@ -198,7 +210,7 @@ main {
     z-index: -1;
     height: 100%;
     width: 100%;
-    background: rgba(0,0,0);
+    background: $about-background;
     color: $about-background-text;
     opacity: 0;
 
@@ -288,4 +300,19 @@ main {
     z-index: 3;
     display: none;
     opacity: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    .heading-container {
+        overflow: hidden;
+    }
+    h1 {
+        overflow: hidden;
+        font-family: 'Bigilla'; 
+        font-weight: 400; 
+        font-size: 6rem;  
+        margin: 0
+    }
 }
