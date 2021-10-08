@@ -158,3 +158,82 @@ aboutLink.addEventListener('click', function() {
         
     }
 })
+
+
+
+collectionImagesIndex = [
+    [sortedImageList[0], sortedImageList[1]],
+    [sortedImageList[2], sortedImageList[3]],
+    [sortedImageList[4], sortedImageList[5]],
+    [sortedImageList[6], sortedImageList[7], sortedImageList[8]],
+    [sortedImageList[9], sortedImageList[10]],
+    [sortedImageList[11], sortedImageList[12]],
+    [sortedImageList[13], sortedImageList[14], sortedImageList[15]],
+    [sortedImageList[16]]
+]
+
+
+
+    // abtl.play()
+    // if (about_revealed == false) {
+    //     about_revealed = true;
+        
+        
+    //     // abtl.set(sortedImageList, {
+    //         //     y: windowHeight/1.4 + 10,
+    //         //     opacity: -1,
+    //         // })
+    //         abtl.set('.column-text-inner', {
+    //             y: 0,
+    //         })
+            
+    //     // abtl.to(sortedImageList, {
+    //     //     duration: 1.2,
+    //     //     stagger: {
+    //     //         from: 16,
+    //     //         amount: 0.425 // 1.7
+    //     //     }, 
+    //     //     delay: 0,
+    //     //     ease: Power2.easeIn,
+    
+    //     //     y: +windowHeight/1.4 - 10,
+    //     //     opacity: -1,
+    //     // })
+        
+    //     abtl.to(sortedImageList, {
+    //         duration: 1.2,
+    //         stagger: {
+    //             from: 0,
+    //             amount: 0.425 // 1.7
+    //         }, 
+    //         delay: 0,
+    //         ease: Power2.easeIn,
+    
+    //         y: -windowHeight/1.4 - 10,
+    //         opacity: -1,
+    //     })
+        
+    //     abtl.set('#about', {zIndex: 3}, 0)
+    //     abtl.to('#about', {
+    //         duration: duration, 
+    //         opacity: 1,
+    //         ease: Power2.easeInOut
+    //     }, 0.25)
+
+    //     abtl.to('nav a', {color: 'white'}, "<")
+    //     abtl.from('.column-text-inner', {
+    //         duration: duration + 0.2,
+    //         y: 310,
+    //         ease: Power2.easeOut
+    //     }, "<")
+
+    //     abtl.to('.main-link', {
+    //         opacity: 0,
+    //         display: 'none'
+    //     }, "<")
+    // }
+    // else {
+    //     about_revealed = false;
+    //     // abtl.reverse()
+    // }
+
