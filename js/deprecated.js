@@ -236,4 +236,3 @@ collectionImagesIndex = [
     //     about_revealed = false;
     //     // abtl.reverse()
     // }
-

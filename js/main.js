@@ -6,6 +6,7 @@ const nav = document.querySelector('nav');
 let windowHeight = window.innerHeight, windowWidth = window.innerWidth;
 
 const order = [0,6,13,11,4,16,9,2,1,12,7,14,5,10,3,8,15] // 7 and 14 switched, 14 ^ 7
+// const order = [0,6,13,11,4,16,9,2,1,12,7,14,17,5,10,18,19,3,8,15] // 7 and 14 switched, 14 ^ 7
 let sortedImageList = []
 //create list of all images, run loop through them for serial number, push them into array
 let images = document.querySelectorAll('.col-img img');
